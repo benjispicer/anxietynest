@@ -1,0 +1,683 @@
+// Variables
+text #ffffff
+$anxiety-red: #FF8D8D
+$anxiety-pink: #FF8DC2
+$anxiety-green: #9CE6A6
+$anxiety-purple: #8B7EFF
+
+::selection
+  background: #2F2769
+  color: #ffffff
+
+// Global Styles
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: 'Montserrat', sans-serif
+
+.clearfix
+  content: " "
+  display: table
+  clear: both
+
+.wrapper
+  max-width: 1100px
+  width: 100%
+  margin: 0 auto
+
+.page-break
+  border: 0.5px solid #dfdfdf
+
+// Styles
+
+.hero
+  height: 100vh
+  width: 100%
+  z-index: 10
+  background: linear-gradient(135deg, #2f2769, #5e4ed2)
+
+  .hero-top
+    width: 100%
+    position: absolute
+    .logo-container
+      float: left
+      margin: 26px
+      @media only screen and (max-width: 822px)
+          float: none
+          text-align: center
+    .hamburger
+      position: absolute
+      color: #ffffff
+      font-size: 32px
+      padding: 5px
+      top: 26px
+      right: 21px
+      display: none
+      @media only screen and (max-width: 822px)
+        display: block
+    .main-nav
+      list-style: none
+      float: right
+      margin: 26px
+      @media only screen and (max-width: 822px)
+          float: none
+          text-align: center
+          background: #382E7D
+          overflow: hidden
+          display: none
+          z-index: 1000
+          box-shadow: 0px 3px 6px rgba(0,0,0,0.1)
+          margin-left: 0
+          margin-right: 0
+          border-bottom: 2px solid #fff
+          padding-bottom: 10px
+
+
+      .nav-item
+        display: inline-block
+        margin: 13px 10px
+        &:last-of-type
+          margin-right: 0
+        @media only screen and (max-width: 822px)
+            display: block
+            padding: 5px 0px
+
+            &:last-of-type
+              margin-right: 10px
+
+        .nav-link
+          color: rgba(255,255,255,0.6)
+          font-size: 16px
+          text-decoration: none
+          &:hover
+            color: rgba(255,255,255,0.8)
+
+        .nav-cta
+          padding: 12px 34px
+          background-color: rgba(255,255,255,0.1)
+          border-radius: 40px
+          border: solid 1px #fff
+          margin: none
+          color: #fff
+          transition:  background 0.4s
+          &:hover
+            background-color: rgba(255,255,255,0.4)
+
+
+  .hero-container
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    .hero-content
+      text-align: center
+
+      .title
+        font-size: 2.6rem
+        color: #fff
+        font-weight: 400
+        @media only screen and (max-width: 500px)
+          font-size: 1.6rem
+      .subtitle
+        font-size: 1.6rem
+        color: rgba(255,255,255, 0.5)
+        font-weight: 500
+        @media only screen and (max-width: 500px)
+          font-size: 1.2rem
+      .hero-buttons
+        margin-top: 60px
+
+        .watch-video
+          padding: 25px 40px
+          border-radius: 40px
+          background: #DC73CC
+          text-decoration: none
+          color: #ffffff
+          font-size: 16px
+          margin: 5px
+          @media only screen and (max-width: 600px)
+            font-size: 0.6rem
+        .sign-up
+          padding: 24px 52px
+          border-radius: 40px
+          text-decoration: none
+          border: 1px solid #ffffff
+          color: #ffffff
+          font-size: 16px
+          margin: 5px
+          background-color: rgba(255,255,255,0.1)
+          transition: background 0.2s linear
+          &:hover
+            background-color: rgba(255,255,255,0.4)
+          @media only screen and (max-width: 600px)
+            font-size: 0.6rem
+
+
+
+.intro
+  // background: linear-gradient(135deg, #69FBBC, #B4E2CE)
+  overflow: hidden
+  padding: 80px 0px
+  .wrapper
+    .intro-content
+      .section-title
+        color: #382E7D
+        font-size: 1.6rem
+        &::after
+          content: ""
+          width: 40px
+          height: 4px
+          display: block
+          background: #382E7D
+          margin-top: 20px
+          margin-bottom: 40px
+          @media only screen and (max-width: 900px)
+            margin: 0 auto
+            margin-top: 20px
+            margin-bottom: 40px
+      .intro-container
+        display: grid
+        grid-template-columns: auto auto
+        grid-gap: 10px
+        @media only screen and (max-width: 900px)
+          grid-template-columns: auto
+        .intro-text
+          overflow: hidden
+          @media only screen and (max-width: 900px)
+            padding: 0px 10px
+            text-align: center
+          .text
+            color: #565656
+            line-height: 30px
+          .buttons
+            margin-top: 20px
+
+        .intro-img
+          padding: 0px 40px
+          @media only screen and (max-width: 900px)
+            margin: 0 auto
+            padding: 0px
+
+
+
+
+.features
+  background: #ffffff
+  padding-top: 80px
+  padding-bottom: 80px
+  .wrapper
+    .features-content
+      text-align: center
+      .section-title
+        color: #382E7D
+        font-size: 1.6rem
+        &::after
+          content: ""
+          width: 40px
+          height: 4px
+          display: block
+          background: #382E7D
+          margin: 0 auto
+          margin-top: 20px
+          margin-bottom: 40px
+      .features-grid
+        display: grid
+        grid-template-columns: auto auto auto
+        grid-gap: 10px
+        margin-bottom: 60px
+        @media only screen and (max-width: 780px)
+          grid-template-columns: auto auto
+        @media only screen and (max-width: 540px)
+          grid-template-columns: auto
+          padding: 0px 15px
+        .feature
+          overflow: hidden
+          &:nth-child(1)
+            border: 4px solid $anxiety-green
+          &:nth-child(2)
+            border: 4px solid $anxiety-pink
+          &:nth-child(3)
+            border: 4px solid $anxiety-purple
+          &:nth-child(4)
+            border: 4px solid $anxiety-red
+          &:nth-child(5)
+            border: 4px solid $anxiety-purple
+          &:nth-child(6)
+            border: 4px solid $anxiety-green
+          .feature-heading
+            padding-top: 20px
+            padding-bottom: 0px
+          .feature-content
+            padding: 20px
+            text-align: center
+            overflow: hidden
+            color: #565656
+            .feature-title
+              margin-bottom: 10px
+              font-size: 1.4rem
+      .sign-up
+        padding: 20px 34px
+        background-color: #DC73CC
+        border-radius: 40px
+        text-decoration: none
+        color: #fff
+        font-weight: 700
+        box-shadow: 0px 3px 6px rgba(0,0,0,0.2)
+
+
+
+.where-to-start
+  padding-top: 80px
+  padding-bottom: 80px
+  .wrapper
+    .where-to-start-content
+      text-align: center
+      .section-title
+        color: #382E7D
+        font-size: 1.6rem
+        &::after
+          content: ""
+          width: 24px
+          height: 3px
+          display: block
+          background: #382E7D
+          margin: 0 auto
+          margin-top: 20px
+          margin-bottom: 40px
+      .instructions
+        display: grid
+        grid-template-columns: auto
+        grid-gap: 20px
+        padding: 0px 15px
+        .instruction
+          box-shadow: 0px 3px 6px rgba(0,0,0,0.2)
+          border-radius: 5px
+          overflow: hidden
+          padding: 15px
+          &:nth-of-type(1)
+            border: 2px solid $anxiety-purple
+          &:nth-of-type(2)
+            border: 2px solid $anxiety-pink
+          &:nth-of-type(3)
+            border: 2px solid $anxiety-red
+          .instruction-img
+            float: left
+          .instruction-content
+            float: left
+            text-align: left
+            padding: 15px
+            .instruction-title
+              font-size: 1.2rem
+              color: #565656
+              margin-bottom: 4px
+            .instruction-brief
+              color: #565656
+              font-size: 0.9rem
+          .instruction-number
+            background-color: red
+            height: 40px
+            width: 40px
+            padding: 10px 15px
+            border-radius: 40px
+            text-decoration: none
+            font-weight: 500
+            float: right
+            margin: 15px
+            color: #ffffff
+            box-shadow: 0px 3px 6px rgba(0,0,0,0.16)
+          .purple
+            background-color: $anxiety-purple
+          .pink
+            background-color: $anxiety-pink
+          .red
+            background-color: $anxiety-red
+
+
+
+
+
+
+.questions
+  padding: 80px 0px
+  .wrapper
+    .questions-content
+      text-align: center
+      .section-title
+        color: #382E7D
+        font-size: 1.6rem
+        &::after
+          content: ""
+          width: 24px
+          height: 3px
+          display: block
+          background: #382E7D
+          margin: 0 auto
+          margin-top: 20px
+          margin-bottom: 40px
+      .questions-section
+        width: 100%
+        .section-left
+          width: 50%
+          float: left
+          padding: 0px 20px
+          overflow: hidden
+          button.question
+           width: 100%
+           outline: none
+           background-color: #ffffff
+           border: none
+           padding: 26px 20px
+           text-align: left
+           cursor: pointer
+           transition: background-color 0.2s linear
+           box-shadow: 0px 3px 6px rgba(0,0,0,0.2)
+           border-radius: 5px
+           &:hover
+             background-color: #F6F6F6
+
+           &:nth-of-type(3)
+             border-left: solid 8px #FF8D8D
+           &:nth-of-type(2)
+             border-left: solid 8px #8B7EFF
+           &:nth-of-type(1)
+             border-left: solid 8px #FF8DC2
+           &:nth-of-type(4)
+             border-left: solid 8px #9CE6A6
+
+
+          .question-content
+            background-color: white
+            border-left: 1px solid whitesmoke
+            border-right: 1px solid whitesmoke
+            padding: 0 20px
+            max-height: 0
+            overflow: hidden
+            transition: max-height 0.2s ease-in-out
+            margin-bottom: 10px
+            border-radius: 5px
+            box-shadow: 0px 3px 6px rgba(0,0,0,0.2)
+            p
+              margin-top: 10px
+              margin-bottom: 10px
+              font-size: 14px
+          @media only screen and (max-width: 800px)
+            width: 100%
+            float: none
+        .section-right
+          width: 50%
+          float: right
+          padding: 0px 20px
+          overflow: hidden
+          button.question
+           width: 100%
+           outline: none
+           background-color: #ffffff
+           border: none
+           padding: 26px 20px
+           text-align: left
+           cursor: pointer
+           transition: background-color 0.2s linear
+           box-shadow: 0px 3px 6px rgba(0,0,0,0.2)
+           border-radius: 5px
+           &:hover
+            background-color: #F6F6F6
+
+           &:nth-of-type(4)
+             border-left: solid 8px #FF8D8D
+           &:nth-of-type(1)
+             border-left: solid 8px #8B7EFF
+           &:nth-of-type(3)
+             border-left: solid 8px #FF8DC2
+           &:nth-of-type(2)
+             border-left: solid 8px #9CE6A6
+
+          .question-content
+            background-color: white
+            padding: 0px 20px
+            max-height: 0
+            overflow: hidden
+            transition: max-height 0.2s ease-in-out
+            text-align: center
+            margin-bottom: 10px
+            border-radius: 5px
+            box-shadow: 0px 3px 6px rgba(0,0,0,0.2)
+            p
+              margin-top: 10px
+              margin-bottom: 10px
+              font-size: 14px
+          @media only screen and (max-width: 800px)
+            width: 100%
+            float: none
+
+
+.about
+  width: 100%
+  background: #FBFBFB
+  text-align: center
+  padding: 80px 0px
+  .section-title
+    color: #382E7D
+    font-size: 1.6rem
+    &::after
+      content: ""
+      width: 40px
+      height: 4px
+      display: block
+      background: #382E7D
+      margin: 0 auto
+      margin-top: 20px
+      margin-bottom: 40px
+  .our-story
+    padding: 40px 0px
+    overflow: hidden
+    .wrapper
+      .our-story-content
+        text-align: center
+        background-color: #ffffff
+        border-radius: 5px
+        box-shadow: 0px 3px 6px rgba(0,0,0,0.1)
+        padding: 20px 5px
+        .title
+          color: #989898
+          font-size: 1.2rem
+          font-weight: 400
+          &::after
+            content: ""
+            width: 24px
+            height: 2px
+            display: block
+            background: #989898
+            margin: 0 auto
+            margin-top: 5px
+            margin-bottom: 40px
+        .para-left
+          width: 50%
+          float: left
+          padding: 0px 20px
+          line-height: 30px
+          @media only screen and (max-width: 800px)
+            width: 100%
+            float: none
+            margin-bottom: 10px
+          .text
+            line-height: 30px
+            color: #989898
+        .para-right
+          width: 50%
+          float: right
+          padding: 0px 20px
+          @media only screen and (max-width: 800px)
+            width: 100%
+            float: none
+          .text
+            line-height: 30px
+            color: #989898
+  .the-team
+    .wrapper
+      .the-team-content
+        text-align: center
+        padding: 80px 0px
+        .title
+          color: #989898
+          font-size: 1.2rem
+          font-weight: 400
+          &::after
+            content: ""
+            width: 24px
+            height: 2px
+            display: block
+            background:  #989898
+            margin: 0 auto
+            margin-top: 5px
+            margin-bottom: 40px
+        .team-members
+          display: grid
+          grid-template-columns: auto auto auto auto
+          @media only screen and (max-width: 810px)
+            grid-template-columns: auto auto
+          @media only screen and (max-width: 500px)
+            grid-template-columns: auto
+            padding: 0px 5px
+          .team-member
+            overflow: hidden
+            height: 300px
+            position: relative
+            &:hover .card-bottom
+              opacity: 100
+
+            .profile-pic
+
+            .card-bottom
+              height: 100%
+              background: rgba(0,0,0,0.7)
+              z-index: 9
+              width: 100%
+              position: absolute
+              bottom: 0
+              left: 0
+              padding: 20px
+              opacity: 0
+              transition: opacity 0.6s
+              @media only screen and (max-width: 500px)
+                opacity: 100
+                height: 80px
+              .member-name
+                color: #ffffff
+                font-weight: 400
+              .member-role
+                color: #ffffff
+
+
+
+  .our-partners
+    .wrapper
+     .partners-content
+       padding: 40px 0px
+       text-align: center
+       .title
+        color: #989898
+        font-size: 1.2rem
+        font-weight: 400
+        &::after
+          content: ""
+          width: 24px
+          height: 2px
+          display: block
+          background:  #989898
+          margin: 0 auto
+          margin-top: 5px
+          margin-bottom: 40px
+       .partners
+        display: grid
+        grid-template-columns: auto auto auto auto
+        grid-gap: 10px
+        @media only screen and (max-width: 800px)
+          grid-template-columns: auto auto
+        .partner
+          overflow: hidden
+          .partner-logo
+            width: 80%
+
+
+.contact
+  padding: 80px 0px
+  .wrapper
+    .contact-content
+      text-align: center
+      .section-title
+        color: #989898
+        font-size: 1.4rem
+        font-weight: 400
+        &::after
+          content: ""
+          width: 24px
+          height: 2px
+          display: block
+          background:  #989898
+          margin: 0 auto
+          margin-top: 5px
+          margin-bottom: 15px
+      .section-sub
+          color: #989898
+          margin-bottom: 40px
+      .contact-us
+        overflow: hidden
+        padding: 5px
+        .inputs-container
+          display: grid
+          grid-template-columns: auto auto auto
+          grid-gap: 10px
+          @media only screen and (max-width: 600px)
+            grid-template-columns: auto
+            margin-bottom: 10px
+          .input
+            padding: 20px
+            outline-color: #382E7D
+        .input
+          padding: 20px
+          outline-color: #382E7D
+          width: 100%
+          margin-bottom: 10px
+        textarea
+          max-width: 100%
+          min-width: 100%
+          width: 100%
+          max-height: 250px
+          height: 100%
+          min-height: 250px
+        button[type="submit"]
+          padding: 20px 50px
+          outline: none
+          border: 1px solid #382E7D
+          background: #382E7D
+          cursor: pointer
+          color: #ffffff
+          float: right
+          @media only screen and (max-width: 600px)
+            width: 100%
+
+
+
+
+
+
+
+
+.footer
+  text-align: center
+  padding-top: 40px
+  padding-bottom: 20px
+  background: linear-gradient(135deg, #2f2769, #5e4ed2)
+  .footer-logo
+
+  .copyright
+    color: rgba(255,255,255,0.6)
+    margin-top: 10px
+
+
+
+
+// Media Queries
