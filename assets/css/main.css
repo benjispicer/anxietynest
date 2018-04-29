@@ -159,6 +159,14 @@
           @media only screen and (max-width: 600px) {
             .hero .hero-container .hero-content .hero-buttons .sign-up {
               font-size: 0.6rem; } }
+    .hero .hero-container .hero-bottom {
+      position: absolute;
+      bottom: 25px;
+      text-align: center;
+      margin: 0 auto; }
+      @media only screen and (max-width: 600px) {
+        .hero .hero-container .hero-bottom {
+          display: none; } }
 
 .intro {
   overflow: hidden;
