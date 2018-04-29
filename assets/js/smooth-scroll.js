@@ -1,32 +1,3 @@
-function myFunction() {
-    var nav = document.getElementById("nav");
-    if (nav.style.display === "none") {
-        nav.style.display = "block";
-    } else {
-        nav.style.display = "none";
-    }
-}
-
-
-
-var accordions = document.getElementsByClassName("question");
-
-for (var i = 0; i < accordions.length; i++) {
-  accordions[i].onclick = function() {
-    this.classList.toggle('is-open');
-
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight) {
-      // accordion is currently open, so close it
-      content.style.maxHeight = null;
-    } else {
-      // accordion is currently closed, so open it
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
-  }
-}
-
-
 $(document).ready(function(){
   // Add smooth scrolling to all links
   $("a").on('click', function(event) {
